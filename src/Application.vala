@@ -7,7 +7,9 @@ public class App: Gtk.Application {
 	}
 
 	protected override void activate() {
+		var label = new Gtk.Label("Hello world again");
 		var main_window = new Gtk.ApplicationWindow(this) {
+				child = label,
 				default_height= 300,
 				default_width= 300,
 				title= "hello world!!!"
@@ -16,6 +18,7 @@ public class App: Gtk.Application {
 	}
 
 	public static int main(string[] args) {
+		print("Arrancando nuestra nueva aplicación...\n");
 		return new App().run(args);
 	}
 }
